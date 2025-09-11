@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    
+   <div class="app">
+       <aside class="sidebar">
+           <div class="brand">
+               <h1>Let's Talk!</h1>
+           </div>
+
+           <div class="search">
+               <input id="personSearch" placeholder="Search by id..." type="number" min="1" />
+               <button id="searchBtn" class="btn small">Find</button>
+           </div>
+
+           <div class="peopleList" id="peopleList"></div>
+
+           <div class="footer">
+               <button id="refreshBtn" class="btn">Refresh</button>
+               <button id="unreadOverviewBtn" class="btn">Unread</button>
+           </div>
+       </aside>
+       <main class="chat-area">
+           <header class="chat-header">
+               <div>
+                   <h2 id="chatTitle">Select a person to start</h2>
+                   <div id="chatSub" class="muted">
+                        Open a conversation by selecting a user on the sidebar 
+                        or use "Open Chat by IDs".
+                   </div>
+               </div>
+
+               <div class="header-actions">
+                   <input id="openUser1" placeholder="user1 id" type="number" min="1">
+                   <input id="openUser2" placeholder="user2 id" type="number" min="1">
+                   <button id="openChatByIds" class="btn"> Open Chat</button>
+               </div>
+           </header>
+
+           <section class="messages" id="messages"></section>
+
+           <footer class="composer">
+               <select id="senderSelect"></select>
+               <select id="receiverSelect"></select>
+               <input id="messageInput" placeholder="Type a message..." />
+               <button id="sendBtn" class="btn">Send</button>
+           </footer>
+       </main>
+   </div>
+
+   <div id="modal" class="modal hidden">
+       <div class="modal-card">
+           <h3>Create Person</h3>
+           <label>Username</label>
+           <input id="newUsername" />
+           <label>Email</label>
+           <input id="newEmail" type="email"? />
+           <label>Password</label>
+           <input id="newPassword" type="password" />
+           <label>Role</label>
+           <select id="newRole">
+               <option>USER</option>
+               <option>ADMIN</option>
+           </select>
+
+           <div class="model-actions">
+               <button id="createUserBtn" class="btn">Create</button>
+               <button id="closeModalBtn" class="btn ghost">Cancel</button>
+           </div>
+       </div>
+   </div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
