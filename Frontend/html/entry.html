@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Let's Talk - Entry</title>
+  <link rel="stylesheet" href="/css/entry.css">
+</head>
+<body>
+    <div class="form-container">
+      <!-- Login form -->
+      <div id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="login-btn">Login</button>
+        <span class="toggle-link" id="show-register">New user? Register</span>
+      </div>
+
+      <div id="register-form" class="hidden">
+        <h2>Register</h2>
+        <input type="text" id="regName" placeholder="Name">
+        <input type="text" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <select id="regRole">
+          <option value="USER">User</option>
+          <option value="ADMIN">Admin</option>
+        </select>
+        <button id="register-btn">Register</button>
+        <span id="show-login" class="toggle-link">Already have an account? Login</span>
+      </div>
+    </div>
+
+    <script src="/js/entry.js"></script>
+</body>
+</html>
