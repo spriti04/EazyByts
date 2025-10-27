@@ -51,11 +51,8 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf.disable())
-                .formLogin(login -> login
-                        .loginProcessingUrl("/person/signIn")
-                        .successHandler((req, res, auth) -> res.setStatus(200))
-                        .failureHandler((req, res, auth) -> res.sendError(401))
-                )
+                .formLogin(Customizer.withDefaults())
+                .httpBasic(Customizer.withDefaults())
                 .logout(logout -> logout
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/person/signIn")
@@ -70,3 +67,4 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+
